@@ -1,18 +1,17 @@
 import { createClient } from "@/lib/supabase/server"
 import { Sidebar } from "@/components/sidebar"
 import { OrdersList } from "@/components/orders/orders-list"
-import { CreateOrderDialog } from "@/components/orders/create-order-dialog"
-import type { Product, Order } from "@/lib/types"
+import type { Order } from "@/lib/types"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Plus } from "lucide-react"
 
 export default async function OrdersPage() {
   const supabase = await createClient()
 
   const { data: orders } = await supabase.from("orders").select("*").order("created_at", { ascending: false })
 
-  const { data: products } = await supabase.from("products").select("*").order("name", { ascending: true })
-
   const orderList = (orders || []) as Order[]
-  const productList = (products || []) as Product[]
 
   return (
     <div className="min-h-screen bg-background flex">
@@ -26,7 +25,12 @@ export default async function OrdersPage() {
               <h1 className="text-3xl font-bold text-text">الطلبات</h1>
               <p className="text-text-muted mt-2">إدارة طلبات العملاء</p>
             </div>
-            <CreateOrderDialog products={productList} />
+            <Link href="/orders/new">
+              <Button className="bg-primary hover:bg-primary-light text-white rounded-xl px-6 py-6 text-lg gap-2">
+                <Plus size={24} />
+                طلب جديد
+              </Button>
+            </Link>
           </div>
 
           {/* قائمة الطلبات */}

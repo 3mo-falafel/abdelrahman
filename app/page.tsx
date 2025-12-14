@@ -3,6 +3,9 @@ import { Sidebar } from "@/components/sidebar"
 import { DashboardContent } from "@/components/dashboard/dashboard-content"
 import type { Product, Order } from "@/lib/types"
 
+export const revalidate = 0
+export const dynamic = 'force-dynamic'
+
 export default async function DashboardPage() {
   const supabase = await createClient()
 

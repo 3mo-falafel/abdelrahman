@@ -18,6 +18,10 @@ export interface Order {
   total_cost: number
   total_profit: number
   status: "جديد" | "مكتمل" | "ملغي"
+  customer_name?: string | null
+  payment_status: "مدفوع" | "دين" | "دفع جزئي"
+  paid_amount: number
+  remaining_amount: number
   created_at: string
   updated_at: string
   items?: OrderItem[]
@@ -34,6 +38,17 @@ export interface OrderItem {
   total_price: number
   total_cost: number
   profit: number
+  custom_price?: number | null
+  discount_amount: number
+  created_at: string
+}
+
+export interface PaymentHistory {
+  id: string
+  order_id: string
+  payment_amount: number
+  payment_date: string
+  notes?: string | null
   created_at: string
 }
 
@@ -72,6 +87,17 @@ export function getOrderStatusColor(status: Order["status"]): string {
       return "bg-green-100 text-green-800"
     case "ملغي":
       return "bg-red-100 text-red-800"
+  }
+}
+
+export function getPaymentStatusColor(status: Order["payment_status"]): string {
+  switch (status) {
+    case "مدفوع":
+      return "bg-green-100 text-green-800"
+    case "دين":
+      return "bg-red-100 text-red-800"
+    case "دفع جزئي":
+      return "bg-yellow-100 text-yellow-800"
   }
 }
 

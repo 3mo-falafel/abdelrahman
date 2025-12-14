@@ -1,15 +1,23 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Minus, ShoppingCart, Trash2, Package } from "lucide-react"
+import { Plus, Minus, ShoppingCart, Trash2, Package, Edit2, User, CreditCard, Search, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
 import type { Product } from "@/lib/types"
 import { formatCurrency } from "@/lib/types"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 interface CreateOrderDialogProps {
   products: Product[]
@@ -18,6 +26,7 @@ interface CreateOrderDialogProps {
 interface CartItem {
   product: Product
   quantity: number
+  customPrice?: number // السعر المخصص
 }
 
 export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
@@ -25,6 +34,10 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
   const [loading, setLoading] = useState(false)
   const [search, setSearch] = useState("")
   const [cart, setCart] = useState<CartItem[]>([])
+  const [customerName, setCustomerName] = useState("")
+  const [paymentStatus, setPaymentStatus] = useState<"مدفوع" | "دين" | "دفع جزئي">("مدفوع")
+  const [paidAmount, setPaidAmount] = useState("")
+  const [editingPrice, setEditingPrice] = useState<string | null>(null)
   const router = useRouter()
 
   const filteredProducts = products.filter(
@@ -66,18 +79,30 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
     setCart(cart.filter((item) => item.product.id !== productId))
   }
 
-  // حساب الإجماليات
+  const updateCustomPrice = (productId: string, newPrice: number) => {
+    setCart(
+      cart.map((item) => (item.product.id === productId ? { ...item, customPrice: newPrice } : item)),
+    )
+    setEditingPrice(null)
+  }
+
+  // حساب الإجماليات مع الأسعار المخصصة
   const totals = cart.reduce(
     (acc, item) => {
-      const itemTotal = item.product.selling_price * item.quantity
+      const actualPrice = item.customPrice ?? item.product.selling_price
+      const itemTotal = actualPrice * item.quantity
       const itemCost = item.product.purchase_price * item.quantity
+      const itemProfit = itemTotal - itemCost
+      const discountAmount = (item.product.selling_price - actualPrice) * item.quantity
+
       return {
         amount: acc.amount + itemTotal,
         cost: acc.cost + itemCost,
-        profit: acc.profit + (itemTotal - itemCost),
+        profit: acc.profit + itemProfit,
+        totalDiscount: acc.totalDiscount + discountAmount,
       }
     },
-    { amount: 0, cost: 0, profit: 0 },
+    { amount: 0, cost: 0, profit: 0, totalDiscount: 0 },
   )
 
   const handleSubmit = async () => {
@@ -86,10 +111,28 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
       return
     }
 
+    // التحقق من اسم العميل في حالة الدين
+    if ((paymentStatus === "دين" || paymentStatus === "دفع جزئي") && !customerName.trim()) {
+      toast.error("الرجاء إدخال اسم العميل للطلبات المدينة")
+      return
+    }
+
+    // التحقق من المبلغ المدفوع في حالة الدفع الجزئي
+    let actualPaidAmount = totals.amount
+    if (paymentStatus === "دفع جزئي") {
+      actualPaidAmount = Number.parseFloat(paidAmount)
+      if (isNaN(actualPaidAmount) || actualPaidAmount <= 0 || actualPaidAmount >= totals.amount) {
+        toast.error("الرجاء إدخال مبلغ صحيح للدفع الجزئي")
+        return
+      }
+    } else if (paymentStatus === "دين") {
+      actualPaidAmount = 0
+    }
+
     setLoading(true)
     const supabase = createClient()
 
-    // إنشاء الطلب
+    // إنشاء الطلب مع معلومات الدفع
     const { data: orderData, error: orderError } = await supabase
       .from("orders")
       .insert({
@@ -97,6 +140,9 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
         total_cost: totals.cost,
         total_profit: totals.profit,
         status: "جديد",
+        customer_name: customerName.trim() || null,
+        payment_status: paymentStatus,
+        paid_amount: actualPaidAmount,
       })
       .select()
       .single()
@@ -107,18 +153,24 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
       return
     }
 
-    // إضافة عناصر الطلب
-    const orderItems = cart.map((item) => ({
-      order_id: orderData.id,
-      product_id: item.product.id,
-      product_name: item.product.name,
-      quantity: item.quantity,
-      unit_price: item.product.selling_price,
-      unit_cost: item.product.purchase_price,
-      total_price: item.product.selling_price * item.quantity,
-      total_cost: item.product.purchase_price * item.quantity,
-      profit: (item.product.selling_price - item.product.purchase_price) * item.quantity,
-    }))
+    // إضافة عناصر الطلب مع الأسعار المخصصة
+    const orderItems = cart.map((item) => {
+      const actualPrice = item.customPrice ?? item.product.selling_price
+      const discountAmount = item.product.selling_price - actualPrice
+      return {
+        order_id: orderData.id,
+        product_id: item.product.id,
+        product_name: item.product.name,
+        quantity: item.quantity,
+        unit_price: item.product.selling_price,
+        unit_cost: item.product.purchase_price,
+        total_price: actualPrice * item.quantity,
+        total_cost: item.product.purchase_price * item.quantity,
+        profit: (actualPrice - item.product.purchase_price) * item.quantity,
+        custom_price: item.customPrice || null,
+        discount_amount: discountAmount * item.quantity,
+      }
+    })
 
     const { error: itemsError } = await supabase.from("order_items").insert(orderItems)
 
@@ -139,10 +191,22 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
         .eq("id", item.product.id)
     }
 
+    // إضافة سجل الدفع الأولي إذا كان هناك دفع
+    if (actualPaidAmount > 0) {
+      await supabase.from("payment_history").insert({
+        order_id: orderData.id,
+        payment_amount: actualPaidAmount,
+        notes: "دفعة أولية عند إنشاء الطلب",
+      })
+    }
+
     toast.success("تم إنشاء الطلب بنجاح")
     setOpen(false)
     setCart([])
     setSearch("")
+    setCustomerName("")
+    setPaymentStatus("مدفوع")
+    setPaidAmount("")
     router.refresh()
     setLoading(false)
   }
@@ -155,109 +219,178 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
           طلب جديد
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+      <DialogContent className="w-[80vw] h-[90vh] overflow-hidden flex flex-col">
         <DialogHeader>
-          <DialogTitle className="text-2xl">إنشاء طلب جديد</DialogTitle>
+          <DialogTitle className="text-3xl font-bold">إنشاء طلب جديد</DialogTitle>
         </DialogHeader>
 
-        <div className="flex-1 overflow-hidden flex gap-4 mt-4">
-          {/* قائمة المنتجات */}
-          <div className="flex-1 flex flex-col overflow-hidden">
-            <Input
-              placeholder="ابحث عن منتج..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="mb-4 rounded-xl"
-            />
-            <div className="flex-1 overflow-y-auto space-y-2">
-              {filteredProducts.length === 0 ? (
-                <p className="text-center text-text-muted py-8">لا توجد منتجات متوفرة</p>
-              ) : (
-                filteredProducts.map((product) => (
-                  <div
-                    key={product.id}
-                    className="flex items-center justify-between p-3 bg-muted rounded-xl hover:bg-muted/70 cursor-pointer transition-colors"
-                    onClick={() => addToCart(product)}
-                  >
-                    <div className="flex items-center gap-3">
-                      {product.image_url ? (
-                        <img
-                          src={product.image_url || "/placeholder.svg"}
-                          alt={product.name}
-                          className="w-10 h-10 rounded-lg object-cover"
-                        />
-                      ) : (
-                        <div className="w-10 h-10 rounded-lg bg-border flex items-center justify-center">
-                          <Package size={16} className="text-text-muted" />
-                        </div>
-                      )}
-                      <div>
-                        <p className="font-medium text-text">{product.name}</p>
-                        <p className="text-sm text-text-muted">متوفر: {product.quantity}</p>
-                      </div>
-                    </div>
-                    <div className="text-left">
-                      <p className="font-bold text-text">{formatCurrency(product.selling_price)}</p>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-
-          {/* سلة الطلب */}
-          <div className="w-80 flex flex-col bg-muted rounded-xl p-4">
-            <h3 className="font-bold text-lg text-text mb-4 flex items-center gap-2">
-              <ShoppingCart size={20} />
+        <div className="flex-1 overflow-hidden flex flex-row gap-4 mt-4">
+          {/* سلة الطلب - على اليسار */}
+          <div className="w-[700px] flex flex-col bg-gradient-to-b from-muted to-background rounded-2xl p-4 border-2 border-border shadow-lg overflow-hidden">
+            <h3 className="font-bold text-xl text-text mb-4 flex items-center gap-2 pb-3 border-border">
+              <ShoppingCart size={24} className="text-primary" />
               سلة الطلب ({cart.length})
             </h3>
 
-            <div className="flex-1 overflow-y-auto space-y-2 mb-4">
+            {/* معلومات العميل والدفع */}
+            <div className="space-y-3 mb-4 p-3 bg-background rounded-xl border border-border">
+              <div>
+                <Label htmlFor="customerName" className="text-xs text-text-muted mb-1 flex items-center gap-1">
+                  <User size={12} />
+                  اسم العميل {(paymentStatus === "دين" || paymentStatus === "دفع جزئي") && <span className="text-danger">*</span>}
+                </Label>
+                <Input
+                  id="customerName"
+                  value={customerName}
+                  onChange={(e) => setCustomerName(e.target.value)}
+                  placeholder="اسم العميل (اختياري)"
+                  className="rounded-lg"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="paymentStatus" className="text-xs text-text-muted mb-1 flex items-center gap-1">
+                  <CreditCard size={12} />
+                  حالة الدفع
+                </Label>
+                <Select value={paymentStatus} onValueChange={(v: any) => setPaymentStatus(v)}>
+                  <SelectTrigger className="rounded-lg">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="مدفوع">مدفوع كاملاً</SelectItem>
+                    <SelectItem value="دفع جزئي">دفع جزئي</SelectItem>
+                    <SelectItem value="دين">دين (لم يدفع)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {paymentStatus === "دفع جزئي" && (
+                <div>
+                  <Label htmlFor="paidAmount" className="text-xs text-text-muted mb-1">
+                    المبلغ المدفوع
+                  </Label>
+                  <Input
+                    id="paidAmount"
+                    type="number"
+                    step="0.01"
+                    value={paidAmount}
+                    onChange={(e) => setPaidAmount(e.target.value)}
+                    placeholder="0.00"
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
+            </div>
+
+            <div className="flex-1 overflow-y-auto space-y-2 mb-4 min-h-[200px]">
               {cart.length === 0 ? (
-                <p className="text-center text-text-muted py-8">السلة فارغة</p>
+                <div className="text-center text-text-muted py-12">
+                  <ShoppingCart size={48} className="mx-auto mb-3 opacity-30" />
+                  <p className="text-lg">السلة فارغة</p>
+                  <p className="text-sm mt-2">انقر على منتج لإضافته</p>
+                </div>
               ) : (
-                cart.map((item) => (
-                  <div key={item.product.id} className="bg-surface p-3 rounded-xl">
-                    <div className="flex items-center justify-between mb-2">
-                      <p className="font-medium text-text text-sm">{item.product.name}</p>
-                      <button
-                        onClick={() => removeFromCart(item.product.id)}
-                        className="text-danger hover:text-danger/80"
-                      >
-                        <Trash2 size={16} />
-                      </button>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-8 w-8 rounded-lg bg-transparent"
-                          onClick={() => updateQuantity(item.product.id, -1)}
+                cart.map((item) => {
+                  const actualPrice = item.customPrice ?? item.product.selling_price
+                  const hasDiscount = item.customPrice && item.customPrice < item.product.selling_price
+                  return (
+                    <div key={item.product.id} className="bg-surface p-3 rounded-xl">
+                      <div className="flex items-center justify-between mb-2">
+                        <p className="font-medium text-text text-sm">{item.product.name}</p>
+                        <button
+                          onClick={() => removeFromCart(item.product.id)}
+                          className="text-danger hover:text-danger/80"
                         >
-                          <Minus size={14} />
-                        </Button>
-                        <span className="w-8 text-center font-bold text-text">{item.quantity}</span>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-8 w-8 rounded-lg bg-transparent"
-                          onClick={() => updateQuantity(item.product.id, 1)}
-                        >
-                          <Plus size={14} />
-                        </Button>
+                          <Trash2 size={16} />
+                        </button>
                       </div>
-                      <p className="font-bold text-text">
-                        {formatCurrency(item.product.selling_price * item.quantity)}
-                      </p>
+
+                      {/* السعر والتعديل */}
+                      <div className="mb-2">
+                        {editingPrice === item.product.id ? (
+                          <div className="flex gap-1">
+                            <Input
+                              type="number"
+                              step="0.01"
+                              defaultValue={actualPrice}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                  updateCustomPrice(item.product.id, Number.parseFloat(e.currentTarget.value))
+                                }
+                              }}
+                              onBlur={(e) => {
+                                const newPrice = Number.parseFloat(e.target.value)
+                                if (newPrice > 0) {
+                                  updateCustomPrice(item.product.id, newPrice)
+                                } else {
+                                  setEditingPrice(null)
+                                }
+                              }}
+                              className="h-7 text-xs rounded"
+                              autoFocus
+                            />
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-2">
+                            <div className="flex-1">
+                              {hasDiscount && (
+                                <p className="text-xs text-text-muted line-through">
+                                  {formatCurrency(item.product.selling_price)}
+                                </p>
+                              )}
+                              <p className={`text-sm font-bold ${hasDiscount ? "text-success" : "text-text"}`}>
+                                {formatCurrency(actualPrice)}
+                              </p>
+                            </div>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-7 w-7"
+                              onClick={() => setEditingPrice(item.product.id)}
+                            >
+                              <Edit2 size={12} />
+                            </Button>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="h-8 w-8 rounded-lg bg-transparent"
+                            onClick={() => updateQuantity(item.product.id, -1)}
+                          >
+                            <Minus size={14} />
+                          </Button>
+                          <span className="w-8 text-center font-bold text-text">{item.quantity}</span>
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="h-8 w-8 rounded-lg bg-transparent"
+                            onClick={() => updateQuantity(item.product.id, 1)}
+                          >
+                            <Plus size={14} />
+                          </Button>
+                        </div>
+                        <p className="font-bold text-text">{formatCurrency(actualPrice * item.quantity)}</p>
+                      </div>
                     </div>
-                  </div>
-                ))
+                  )
+                })
               )}
             </div>
 
             {/* الإجماليات */}
             <div className="border-t border-border pt-4 space-y-2">
+              {totals.totalDiscount > 0 && (
+                <div className="flex justify-between text-warning text-sm">
+                  <span>الخصم:</span>
+                  <span className="font-bold">-{formatCurrency(totals.totalDiscount)}</span>
+                </div>
+              )}
               <div className="flex justify-between text-text">
                 <span>المبلغ الإجمالي:</span>
                 <span className="font-bold">{formatCurrency(totals.amount)}</span>
@@ -270,6 +403,12 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
                 <span>الربح:</span>
                 <span>{formatCurrency(totals.profit)}</span>
               </div>
+              {totals.profit > 0 && (
+                <div className="flex justify-between text-xs text-text-muted">
+                  <span>هامش الربح:</span>
+                  <span>{((totals.profit / totals.amount) * 100).toFixed(1)}%</span>
+                </div>
+              )}
             </div>
 
             {/* زر الإنشاء */}
@@ -280,6 +419,95 @@ export function CreateOrderDialog({ products }: CreateOrderDialogProps) {
             >
               {loading ? "جاري الإنشاء..." : "إنشاء الطلب"}
             </Button>
+          </div>
+
+          {/* قائمة المنتجات - على اليمين */}
+          <div className="flex-1 flex flex-col overflow-hidden bg-background rounded-2xl border-2 border-border p-6">
+            <div className="mb-5">
+              <div className="relative">
+                <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted" size={22} />
+                <Input
+                  placeholder="ابحث عن منتج بالاسم أو الكود..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="rounded-xl pr-14 pl-4 h-16 text-xl border-2 focus:border-primary font-medium"
+                />
+                {search && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setSearch("")}
+                    className="absolute left-3 top-1/2 -translate-y-1/2"
+                  >
+                    <X size={20} />
+                  </Button>
+                )}
+              </div>
+              <div className="flex items-center justify-between mt-4">
+                <p className="text-2xl font-bold text-text">
+                  {filteredProducts.length} منتج متاح
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto">
+              {filteredProducts.length === 0 ? (
+                <div className="text-center text-text-muted py-20">
+                  <Package size={100} className="mx-auto mb-6 opacity-20" />
+                  <p className="text-3xl font-bold mb-3">لا توجد منتجات</p>
+                  <p className="text-xl">{search ? `لا توجد نتائج لـ "${search}"` : "لا توجد منتجات متوفرة"}</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+                  {filteredProducts.map((product) => (
+                    <div
+                      key={product.id}
+                      className="group relative flex flex-col p-6 bg-surface rounded-2xl hover:bg-primary/5 cursor-pointer transition-all border-2 border-border hover:border-primary hover:shadow-2xl transform hover:scale-105"
+                      onClick={() => addToCart(product)}
+                    >
+                      <div className="absolute top-4 left-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+                        اضغط للإضافة +
+                      </div>
+                      
+                      <div className="flex flex-col items-center mb-4">
+                        {product.image_url ? (
+                          <img
+                            src={product.image_url || "/placeholder.svg"}
+                            alt={product.name}
+                            className="w-32 h-32 rounded-2xl object-cover border-4 border-border group-hover:border-primary transition-colors"
+                          />
+                        ) : (
+                          <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center border-4 border-border group-hover:border-primary transition-colors">
+                            <Package size={60} className="text-primary" />
+                          </div>
+                        )}
+                      </div>
+                        
+                      <div className="flex-1 text-center">
+                        <h4 className="font-bold text-text text-xl mb-2 line-clamp-2">{product.name}</h4>
+                        <p className="text-sm text-text-muted mb-3">كود: {product.code}</p>
+                        <div className="flex items-center justify-center gap-2 mb-4">
+                          <span className={`text-sm font-bold px-4 py-2 rounded-full ${
+                            product.quantity > product.low_stock_threshold 
+                              ? "bg-success/20 text-success border-2 border-success" 
+                              : product.quantity > 0 
+                              ? "bg-warning/20 text-warning border-2 border-warning"
+                              : "bg-danger/20 text-danger border-2 border-danger"
+                          }`}>
+                            {product.quantity > 0 ? `${product.quantity} متوفر` : "نفد"}
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="text-center pt-4 border-t-2 border-border">
+                        <p className="text-sm text-text-muted mb-2">سعر البيع</p>
+                        <p className="font-bold text-primary text-3xl">{formatCurrency(product.selling_price)}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </DialogContent>

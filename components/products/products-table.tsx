@@ -72,7 +72,13 @@ export function ProductsTable({ products }: ProductsTableProps) {
     const { error } = await supabase.from("products").delete().eq("id", deleteProduct.id)
 
     if (error) {
-      toast.error("حدث خطأ في حذف المنتج")
+      console.error("Delete error:", error)
+      // Check for foreign key constraint violation
+      if (error.code === "23503" || error.message?.includes("foreign key") || error.message?.includes("violates")) {
+        toast.error("لا يمكن حذف المنتج لأنه مرتبط بطلبات موجودة")
+      } else {
+        toast.error(`حدث خطأ في حذف المنتج: ${error.message || 'خطأ غير معروف'}`)
+      }
     } else {
       toast.success("تم حذف المنتج بنجاح")
       router.refresh()

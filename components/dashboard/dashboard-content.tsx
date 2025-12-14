@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { StatCard } from "@/components/stat-card"
-import { DollarSign, TrendingUp, Package, AlertTriangle, ShoppingCart, Clock, Search, X } from "lucide-react"
+import { DollarSign, TrendingUp, Package, AlertTriangle, ShoppingCart, Clock, Search, X, Wallet } from "lucide-react"
 import { formatCurrency, formatDate, getOrderStatusColor, getStockStatus, getStockStatusColor } from "@/lib/types"
 import type { Product, Order } from "@/lib/types"
 import Link from "next/link"
@@ -17,12 +17,22 @@ interface DashboardContentProps {
 export function DashboardContent({ products, orders }: DashboardContentProps) {
   const [searchQuery, setSearchQuery] = useState("")
 
-  // حساب الإحصائيات
-  const completedOrders = orders.filter((o) => o.status === "مكتمل")
-  const totalSales = completedOrders.reduce((sum, o) => sum + Number(o.total_amount), 0)
-  const totalProfit = completedOrders.reduce((sum, o) => sum + Number(o.total_profit), 0)
+  // حساب الإحصائيات - حساب جميع الطلبات للمبيعات الإجمالية
+  const totalSales = orders.reduce((sum, o) => sum + Number(o.total_amount || 0), 0)
+  const totalProfit = orders.reduce((sum, o) => sum + Number(o.total_profit || 0), 0)
+  const totalOrders = orders.length
+  const completedOrders = orders.filter((o) => o.status === "مكتمل").length
   const totalProducts = products.length
   const lowStockProducts = products.filter((p) => p.quantity <= p.low_stock_threshold).length
+
+  // حساب الديون
+  const totalDebt = orders
+    .filter((o) => o.payment_status === "دين" || o.payment_status === "دفع جزئي")
+    .reduce((sum, o) => sum + Number(o.remaining_amount || 0), 0)
+  const debtOrders = orders.filter((o) => o.payment_status === "دين" || o.payment_status === "دفع جزئي").length
+
+  // حساب قيمة المخزون الإجمالية
+  const inventoryValue = products.reduce((sum, p) => sum + (p.quantity * p.selling_price), 0)
 
   // آخر الطلبات
   const recentOrders = orders.slice(0, 5)
@@ -137,14 +147,39 @@ export function DashboardContent({ products, orders }: DashboardContentProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard title="إجمالي المبيعات" value={totalSales} icon={DollarSign} isCurrency color="primary" />
         <StatCard title="إجمالي الأرباح" value={totalProfit} icon={TrendingUp} isCurrency color="success" />
-        <StatCard title="عدد المنتجات" value={totalProducts} icon={Package} color="primary" />
+        <StatCard title="قيمة المخزون" value={inventoryValue} icon={Package} isCurrency color="primary" />
         <StatCard
-          title="منتجات منخفضة"
-          value={lowStockProducts}
-          icon={AlertTriangle}
-          color={lowStockProducts > 0 ? "danger" : "success"}
+          title="إجمالي الديون"
+          value={totalDebt}
+          icon={Wallet}
+          isCurrency
+          color={totalDebt > 0 ? "danger" : "success"}
         />
       </div>
+
+      {/* إشعار الديون */}
+      {debtOrders > 0 && (
+        <Link href="/debts">
+          <div className="bg-gradient-to-r from-danger/10 to-warning/10 border border-danger/20 rounded-2xl p-4 mb-8 hover:shadow-md transition-shadow cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-danger/10 rounded-xl">
+                  <Wallet className="text-danger" size={24} />
+                </div>
+                <div>
+                  <p className="font-bold text-text">لديك ديون معلقة</p>
+                  <p className="text-sm text-text-muted">
+                    {debtOrders} طلب بإجمالي {formatCurrency(totalDebt)}
+                  </p>
+                </div>
+              </div>
+              <Button variant="outline" className="border-danger text-danger hover:bg-danger hover:text-white">
+                عرض الديون
+              </Button>
+            </div>
+          </div>
+        </Link>
+      )}
 
       {/* القسم السفلي */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

@@ -16,6 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/menu.js [app-ssr] (ecmascript) <export default as Menu>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/user.js [app-ssr] (ecmascript) <export default as User>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wallet$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Wallet$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/wallet.js [app-ssr] (ecmascript) <export default as Wallet>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 "use client";
 ;
@@ -40,6 +41,11 @@ const navItems = [
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$cart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingCart$3e$__["ShoppingCart"]
     },
     {
+        href: "/debts",
+        label: "الديون",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wallet$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Wallet$3e$__["Wallet"]
+    },
+    {
         href: "/reports",
         label: "التقارير",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"]
@@ -58,18 +64,18 @@ function Sidebar() {
                     size: 24
                 }, void 0, false, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 19
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                     size: 24
                 }, void 0, false, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 37
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -77,7 +83,7 @@ function Sidebar() {
                 onClick: ()=>setIsOpen(false)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 18
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -91,7 +97,7 @@ function Sidebar() {
                                 children: "إدارة المتجر"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                lineNumber: 40,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -99,13 +105,13 @@ function Sidebar() {
                                 children: "نظام إدارة متجرك بسهولة"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                lineNumber: 41,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -122,26 +128,26 @@ function Sidebar() {
                                         size: 24
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 59,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: item.label
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                        lineNumber: 59,
+                                        lineNumber: 60,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, item.href, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                lineNumber: 50,
+                                lineNumber: 51,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                        lineNumber: 44,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -156,12 +162,12 @@ function Sidebar() {
                                         className: "text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                        lineNumber: 68,
+                                        lineNumber: 69,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -171,7 +177,7 @@ function Sidebar() {
                                             children: "abdelrahman"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 72,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -179,30 +185,30 @@ function Sidebar() {
                                             children: "صاحب المتجر"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                            lineNumber: 72,
+                                            lineNumber: 73,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 71,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                            lineNumber: 66,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                        lineNumber: 65,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 7
             }, this)
         ]
@@ -1165,6 +1171,8 @@ __turbopack_context__.s([
     ()=>formatNumber,
     "getOrderStatusColor",
     ()=>getOrderStatusColor,
+    "getPaymentStatusColor",
+    ()=>getPaymentStatusColor,
     "getStockStatus",
     ()=>getStockStatus,
     "getStockStatusColor",
@@ -1193,6 +1201,16 @@ function getOrderStatusColor(status) {
             return "bg-green-100 text-green-800";
         case "ملغي":
             return "bg-red-100 text-red-800";
+    }
+}
+function getPaymentStatusColor(status) {
+    switch(status){
+        case "مدفوع":
+            return "bg-green-100 text-green-800";
+        case "دين":
+            return "bg-red-100 text-red-800";
+        case "دفع جزئي":
+            return "bg-yellow-100 text-yellow-800";
     }
 }
 function formatCurrency(amount) {
@@ -1285,7 +1303,13 @@ function ProductsTable({ products }) {
         const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$supabase$2f$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createClient"])();
         const { error } = await supabase.from("products").delete().eq("id", deleteProduct.id);
         if (error) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error("حدث خطأ في حذف المنتج");
+            console.error("Delete error:", error);
+            // Check for foreign key constraint violation
+            if (error.code === "23503" || error.message?.includes("foreign key") || error.message?.includes("violates")) {
+                __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error("لا يمكن حذف المنتج لأنه مرتبط بطلبات موجودة");
+            } else {
+                __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error(`حدث خطأ في حذف المنتج: ${error.message || 'خطأ غير معروف'}`);
+            }
         } else {
             __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success("تم حذف المنتج بنجاح");
             router.refresh();
@@ -1307,7 +1331,7 @@ function ProductsTable({ products }) {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                lineNumber: 88,
+                                lineNumber: 94,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1317,7 +1341,7 @@ function ProductsTable({ products }) {
                                 className: "pr-10 pl-10 text-lg py-6 rounded-xl"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                lineNumber: 89,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this),
                             search && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1327,18 +1351,18 @@ function ProductsTable({ products }) {
                                     size: 20
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 106,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                lineNumber: 96,
+                                lineNumber: 102,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                        lineNumber: 87,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this),
                     search && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1350,13 +1374,13 @@ function ProductsTable({ products }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                        lineNumber: 104,
+                        lineNumber: 110,
                         columnNumber: 20
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                lineNumber: 86,
+                lineNumber: 92,
                 columnNumber: 7
             }, this),
             filteredProducts.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1367,7 +1391,7 @@ function ProductsTable({ products }) {
                         size: 48
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                        lineNumber: 110,
+                        lineNumber: 116,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1375,13 +1399,13 @@ function ProductsTable({ products }) {
                         children: search ? "لا توجد منتجات مطابقة للبحث" : "لا توجد منتجات بعد"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                        lineNumber: 111,
+                        lineNumber: 117,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                lineNumber: 109,
+                lineNumber: 115,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "overflow-x-auto",
@@ -1397,7 +1421,7 @@ function ProductsTable({ products }) {
                                         children: "المنتج"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 124,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1405,7 +1429,7 @@ function ProductsTable({ products }) {
                                         children: "الكود"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 125,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1413,7 +1437,7 @@ function ProductsTable({ products }) {
                                         children: "سعر الشراء"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 126,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1421,7 +1445,7 @@ function ProductsTable({ products }) {
                                         children: "سعر البيع"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 127,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1429,7 +1453,7 @@ function ProductsTable({ products }) {
                                         children: "الربح"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 128,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1437,7 +1461,7 @@ function ProductsTable({ products }) {
                                         children: "الكمية"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 129,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1445,7 +1469,7 @@ function ProductsTable({ products }) {
                                         children: "الحالة"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 130,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1453,18 +1477,18 @@ function ProductsTable({ products }) {
                                         children: "إجراءات"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 131,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                lineNumber: 117,
+                                lineNumber: 123,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                            lineNumber: 116,
+                            lineNumber: 122,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -1486,7 +1510,7 @@ function ProductsTable({ products }) {
                                                         className: "w-12 h-12 rounded-lg object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 139,
+                                                        lineNumber: 145,
                                                         columnNumber: 27
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-12 h-12 rounded-lg bg-muted flex items-center justify-center",
@@ -1495,12 +1519,12 @@ function ProductsTable({ products }) {
                                                             className: "text-text-muted"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                            lineNumber: 146,
+                                                            lineNumber: 152,
                                                             columnNumber: 29
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 145,
+                                                        lineNumber: 151,
                                                         columnNumber: 27
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1508,18 +1532,18 @@ function ProductsTable({ products }) {
                                                         children: product.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 149,
+                                                        lineNumber: 155,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                lineNumber: 137,
+                                                lineNumber: 143,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 136,
+                                            lineNumber: 142,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1527,7 +1551,7 @@ function ProductsTable({ products }) {
                                             children: product.code
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 152,
+                                            lineNumber: 158,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1535,7 +1559,7 @@ function ProductsTable({ products }) {
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatCurrency"])(product.purchase_price)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 159,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1543,7 +1567,7 @@ function ProductsTable({ products }) {
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatCurrency"])(product.selling_price)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 154,
+                                            lineNumber: 160,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1551,7 +1575,7 @@ function ProductsTable({ products }) {
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatCurrency"])(profit)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 155,
+                                            lineNumber: 161,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1569,12 +1593,12 @@ function ProductsTable({ products }) {
                                                             size: 18
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                            lineNumber: 165,
+                                                            lineNumber: 171,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 158,
+                                                        lineNumber: 164,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1582,7 +1606,7 @@ function ProductsTable({ products }) {
                                                         children: product.quantity
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 167,
+                                                        lineNumber: 173,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1595,23 +1619,23 @@ function ProductsTable({ products }) {
                                                             size: 18
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                            lineNumber: 175,
+                                                            lineNumber: 181,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 174,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                lineNumber: 157,
+                                                lineNumber: 163,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 156,
+                                            lineNumber: 162,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1621,12 +1645,12 @@ function ProductsTable({ products }) {
                                                 children: status
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                lineNumber: 180,
+                                                lineNumber: 186,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 179,
+                                            lineNumber: 185,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1643,12 +1667,12 @@ function ProductsTable({ products }) {
                                                             size: 18
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                            lineNumber: 192,
+                                                            lineNumber: 198,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 192,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1660,46 +1684,46 @@ function ProductsTable({ products }) {
                                                             size: 18
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                            lineNumber: 200,
+                                                            lineNumber: 206,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                        lineNumber: 194,
+                                                        lineNumber: 200,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                                lineNumber: 185,
+                                                lineNumber: 191,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 190,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, product.id, true, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 141,
                                     columnNumber: 19
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                            lineNumber: 128,
+                            lineNumber: 134,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                    lineNumber: 115,
+                    lineNumber: 121,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                lineNumber: 114,
+                lineNumber: 120,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialog"], {
@@ -1713,7 +1737,7 @@ function ProductsTable({ products }) {
                                     children: "هل أنت متأكد من حذف هذا المنتج؟"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 222,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
@@ -1724,13 +1748,13 @@ function ProductsTable({ products }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 223,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                            lineNumber: 215,
+                            lineNumber: 221,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
@@ -1741,7 +1765,7 @@ function ProductsTable({ products }) {
                                     children: "إلغاء"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 228,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
@@ -1750,24 +1774,24 @@ function ProductsTable({ products }) {
                                     children: "حذف"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                            lineNumber: 221,
+                            lineNumber: 227,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                    lineNumber: 214,
+                    lineNumber: 220,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                lineNumber: 213,
+                lineNumber: 219,
                 columnNumber: 7
             }, this),
             editProduct && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$products$2f$edit$2d$product$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["EditProductDialog"], {
@@ -1776,13 +1800,13 @@ function ProductsTable({ products }) {
                 onOpenChange: ()=>setEditProduct(null)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-                lineNumber: 232,
+                lineNumber: 238,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/arabic-store-management (1)/components/products/products-table.tsx",
-        lineNumber: 85,
+        lineNumber: 91,
         columnNumber: 5
     }, this);
 }

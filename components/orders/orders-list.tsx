@@ -1,12 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { ShoppingCart, Eye, Clock } from "lucide-react"
+import { ShoppingCart, Eye, Clock, Search, X, CreditCard, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { OrderDetailsDialog } from "./order-details-dialog"
 import type { Order } from "@/lib/types"
-import { formatCurrency, formatDate, getOrderStatusColor } from "@/lib/types"
+import { formatCurrency, formatDate, getOrderStatusColor, getPaymentStatusColor } from "@/lib/types"
 import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
@@ -19,9 +20,19 @@ export function OrdersList({ orders }: OrdersListProps) {
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null)
   const [loadingId, setLoadingId] = useState<string | null>(null)
   const [statusFilter, setStatusFilter] = useState<string>("all")
+  const [paymentFilter, setPaymentFilter] = useState<string>("all")
+  const [searchQuery, setSearchQuery] = useState("")
   const router = useRouter()
 
-  const filteredOrders = statusFilter === "all" ? orders : orders.filter((o) => o.status === statusFilter)
+  // Filter orders by status, payment, and search
+  const filteredOrders = orders.filter((o) => {
+    const matchesStatus = statusFilter === "all" || o.status === statusFilter
+    const matchesPayment = paymentFilter === "all" || o.payment_status === paymentFilter
+    const matchesSearch = !searchQuery.trim() || 
+      o.order_number.toString().includes(searchQuery) ||
+      (o.customer_name?.toLowerCase().includes(searchQuery.toLowerCase()))
+    return matchesStatus && matchesPayment && matchesSearch
+  })
 
   const handleStatusChange = async (orderId: string, newStatus: Order["status"]) => {
     setLoadingId(orderId)
@@ -43,19 +54,57 @@ export function OrdersList({ orders }: OrdersListProps) {
 
   return (
     <div className="bg-surface rounded-2xl shadow-sm border border-border">
-      {/* فلتر الحالة */}
-      <div className="p-4 border-b border-border">
-        <Select value={statusFilter} onValueChange={setStatusFilter}>
-          <SelectTrigger className="w-48 rounded-xl">
-            <SelectValue placeholder="جميع الحالات" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">جميع الحالات</SelectItem>
-            <SelectItem value="جديد">جديد</SelectItem>
-            <SelectItem value="مكتمل">مكتمل</SelectItem>
-            <SelectItem value="ملغي">ملغي</SelectItem>
-          </SelectContent>
-        </Select>
+      {/* فلاتر وبحث */}
+      <div className="p-4 border-b border-border space-y-3">
+        {/* بحث */}
+        <div className="relative">
+          <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted" size={18} />
+          <Input
+            placeholder="ابحث برقم الطلب أو اسم العميل..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pr-10 pl-10 rounded-xl"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text"
+            >
+              <X size={18} />
+            </button>
+          )}
+        </div>
+        
+        {/* فلاتر */}
+        <div className="flex gap-3">
+          <Select value={statusFilter} onValueChange={setStatusFilter}>
+            <SelectTrigger className="flex-1 rounded-xl">
+              <SelectValue placeholder="حالة الطلب" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">جميع الحالات</SelectItem>
+              <SelectItem value="جديد">جديد</SelectItem>
+              <SelectItem value="مكتمل">مكتمل</SelectItem>
+              <SelectItem value="ملغي">ملغي</SelectItem>
+            </SelectContent>
+          </Select>
+          
+          <Select value={paymentFilter} onValueChange={setPaymentFilter}>
+            <SelectTrigger className="flex-1 rounded-xl">
+              <SelectValue placeholder="حالة الدفع" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">جميع حالات الدفع</SelectItem>
+              <SelectItem value="مدفوع">مدفوع</SelectItem>
+              <SelectItem value="دين">دين</SelectItem>
+              <SelectItem value="دفع جزئي">دفع جزئي</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        
+        {searchQuery && (
+          <p className="text-sm text-text-muted">تم العثور على {filteredOrders.length} طلب</p>
+        )}
       </div>
 
       {/* قائمة الطلبات */}
@@ -81,11 +130,30 @@ export function OrdersList({ orders }: OrdersListProps) {
                       >
                         {order.status}
                       </span>
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${getPaymentStatusColor(order.payment_status)}`}
+                      >
+                        {order.payment_status}
+                      </span>
                     </div>
-                    <p className="text-text-muted flex items-center gap-1">
-                      <Clock size={16} />
-                      {formatDate(order.created_at)}
-                    </p>
+                    <div className="flex items-center gap-4 text-sm">
+                      <p className="text-text-muted flex items-center gap-1">
+                        <Clock size={16} />
+                        {formatDate(order.created_at)}
+                      </p>
+                      {order.customer_name && (
+                        <p className="text-text-muted flex items-center gap-1">
+                          <User size={16} />
+                          {order.customer_name}
+                        </p>
+                      )}
+                      {order.payment_status !== "مدفوع" && (
+                        <p className="text-danger flex items-center gap-1 font-medium">
+                          <CreditCard size={16} />
+                          متبقي: {formatCurrency(order.remaining_amount)}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
                   {/* الأرقام */}
