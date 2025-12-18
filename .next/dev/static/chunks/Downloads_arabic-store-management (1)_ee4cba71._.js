@@ -206,6 +206,12 @@ function getOrderStatusColor(status) {
             return "bg-green-100 text-green-800";
         case "ملغي":
             return "bg-red-100 text-red-800";
+        case "مرتجع":
+            return "bg-orange-100 text-orange-800";
+        case "مستبدل":
+            return "bg-purple-100 text-purple-800";
+        default:
+            return "bg-gray-100 text-gray-800";
     }
 }
 function getPaymentStatusColor(status) {

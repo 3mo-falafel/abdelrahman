@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ShoppingCart, Eye, Clock, Search, X, CreditCard, User } from "lucide-react"
+import { ShoppingCart, Eye, Clock, Search, X, CreditCard, User, RotateCcw, RefreshCw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { OrderDetailsDialog } from "./order-details-dialog"
+import { ReturnOrderDialog } from "./return-order-dialog"
 import type { Order } from "@/lib/types"
 import { formatCurrency, formatDate, getOrderStatusColor, getPaymentStatusColor } from "@/lib/types"
 import { createClient } from "@/lib/supabase/client"
@@ -18,6 +19,8 @@ interface OrdersListProps {
 
 export function OrdersList({ orders }: OrdersListProps) {
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null)
+  const [returnOrder, setReturnOrder] = useState<Order | null>(null)
+  const [returnType, setReturnType] = useState<"return" | "replace">("return")
   const [loadingId, setLoadingId] = useState<string | null>(null)
   const [statusFilter, setStatusFilter] = useState<string>("all")
   const [paymentFilter, setPaymentFilter] = useState<string>("all")
@@ -86,6 +89,8 @@ export function OrdersList({ orders }: OrdersListProps) {
               <SelectItem value="جديد">جديد</SelectItem>
               <SelectItem value="مكتمل">مكتمل</SelectItem>
               <SelectItem value="ملغي">ملغي</SelectItem>
+              <SelectItem value="مرتجع">مرتجع</SelectItem>
+              <SelectItem value="مستبدل">مستبدل</SelectItem>
             </SelectContent>
           </Select>
           
@@ -173,21 +178,55 @@ export function OrdersList({ orders }: OrdersListProps) {
                   </div>
 
                   {/* الإجراءات */}
-                  <div className="flex items-center gap-2">
-                    <Select
-                      value={order.status}
-                      onValueChange={(value) => handleStatusChange(order.id, value as Order["status"])}
-                      disabled={isLoading}
-                    >
-                      <SelectTrigger className="w-32 rounded-xl">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="جديد">جديد</SelectItem>
-                        <SelectItem value="مكتمل">مكتمل</SelectItem>
-                        <SelectItem value="ملغي">ملغي</SelectItem>
-                      </SelectContent>
-                    </Select>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {/* Status dropdown - only show for non-returned/replaced orders */}
+                    {order.status !== "مرتجع" && order.status !== "مستبدل" && (
+                      <Select
+                        value={order.status}
+                        onValueChange={(value) => handleStatusChange(order.id, value as Order["status"])}
+                        disabled={isLoading}
+                      >
+                        <SelectTrigger className="w-32 rounded-xl">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="جديد">جديد</SelectItem>
+                          <SelectItem value="مكتمل">مكتمل</SelectItem>
+                          <SelectItem value="ملغي">ملغي</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                    
+                    {/* Return/Replace buttons - only for completed orders */}
+                    {order.status === "مكتمل" && (
+                      <>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="rounded-xl gap-1 text-orange-600 border-orange-300 hover:bg-orange-50"
+                          onClick={() => {
+                            setReturnOrder(order)
+                            setReturnType("return")
+                          }}
+                        >
+                          <RotateCcw size={16} />
+                          إرجاع
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="rounded-xl gap-1 text-purple-600 border-purple-300 hover:bg-purple-50"
+                          onClick={() => {
+                            setReturnOrder(order)
+                            setReturnType("replace")
+                          }}
+                        >
+                          <RefreshCw size={16} />
+                          استبدال
+                        </Button>
+                      </>
+                    )}
+                    
                     <Button
                       variant="outline"
                       className="rounded-xl gap-2 bg-transparent"
@@ -207,6 +246,16 @@ export function OrdersList({ orders }: OrdersListProps) {
       {/* حوار التفاصيل */}
       {selectedOrder && (
         <OrderDetailsDialog order={selectedOrder} open={!!selectedOrder} onOpenChange={() => setSelectedOrder(null)} />
+      )}
+
+      {/* حوار الإرجاع/الاستبدال */}
+      {returnOrder && (
+        <ReturnOrderDialog
+          order={returnOrder}
+          open={!!returnOrder}
+          onOpenChange={() => setReturnOrder(null)}
+          type={returnType}
+        />
       )}
     </div>
   )

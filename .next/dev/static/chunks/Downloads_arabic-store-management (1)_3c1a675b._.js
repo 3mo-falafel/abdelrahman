@@ -17,6 +17,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/user.js [app-client] (ecmascript) <export default as User>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wallet$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wallet$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/wallet.js [app-client] (ecmascript) <export default as Wallet>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/rotate-ccw.js [app-client] (ecmascript) <export default as RotateCcw>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/refresh-cw.js [app-client] (ecmascript) <export default as RefreshCw>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -40,6 +42,16 @@ const navItems = [
         href: "/orders",
         label: "الطلبات",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$cart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingCart$3e$__["ShoppingCart"]
+    },
+    {
+        href: "/returns",
+        label: "المرتجعات",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"]
+    },
+    {
+        href: "/replacements",
+        label: "المستبدلات",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__["RefreshCw"]
     },
     {
         href: "/debts",
@@ -66,18 +78,18 @@ function Sidebar() {
                     size: 24
                 }, void 0, false, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                    lineNumber: 28,
+                    lineNumber: 30,
                     columnNumber: 19
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                     size: 24
                 }, void 0, false, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                    lineNumber: 28,
+                    lineNumber: 30,
                     columnNumber: 37
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                lineNumber: 23,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -85,7 +97,7 @@ function Sidebar() {
                 onClick: ()=>setIsOpen(false)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                lineNumber: 32,
+                lineNumber: 34,
                 columnNumber: 18
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -99,7 +111,7 @@ function Sidebar() {
                                 children: "إدارة المتجر"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                lineNumber: 41,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -107,13 +119,13 @@ function Sidebar() {
                                 children: "نظام إدارة متجرك بسهولة"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                lineNumber: 42,
+                                lineNumber: 44,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                        lineNumber: 40,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -130,26 +142,26 @@ function Sidebar() {
                                         size: 24
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                        lineNumber: 59,
+                                        lineNumber: 61,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: item.label
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                        lineNumber: 60,
+                                        lineNumber: 62,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, item.href, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                lineNumber: 51,
+                                lineNumber: 53,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                        lineNumber: 45,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -164,12 +176,12 @@ function Sidebar() {
                                         className: "text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 71,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -179,7 +191,7 @@ function Sidebar() {
                                             children: "abdelrahman"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                            lineNumber: 72,
+                                            lineNumber: 74,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -187,30 +199,30 @@ function Sidebar() {
                                             children: "صاحب المتجر"
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 75,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                            lineNumber: 67,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                        lineNumber: 66,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/sidebar.tsx",
-                lineNumber: 35,
+                lineNumber: 37,
                 columnNumber: 7
             }, this)
         ]
@@ -270,6 +282,12 @@ function getOrderStatusColor(status) {
             return "bg-green-100 text-green-800";
         case "ملغي":
             return "bg-red-100 text-red-800";
+        case "مرتجع":
+            return "bg-orange-100 text-orange-800";
+        case "مستبدل":
+            return "bg-purple-100 text-purple-800";
+        default:
+            return "bg-gray-100 text-gray-800";
     }
 }
 function getPaymentStatusColor(status) {
@@ -512,6 +530,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/search.js [app-client] (ecmascript) <export default as Search>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wallet$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wallet$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/wallet.js [app-client] (ecmascript) <export default as Wallet>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/lucide-react/dist/esm/icons/rotate-ccw.js [app-client] (ecmascript) <export default as RotateCcw>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/lib/types.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/arabic-store-management (1)/components/ui/input.tsx [app-client] (ecmascript)");
@@ -529,16 +548,25 @@ var _s = __turbopack_context__.k.signature();
 function DashboardContent({ products, orders }) {
     _s();
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    // حساب الإحصائيات - حساب جميع الطلبات للمبيعات الإجمالية
-    const totalSales = orders.reduce((sum, o)=>sum + Number(o.total_amount || 0), 0);
-    const totalProfit = orders.reduce((sum, o)=>sum + Number(o.total_profit || 0), 0);
+    // تصفية الطلبات - استثناء المرتجعات والملغية من حسابات الأرباح
+    const activeOrders = orders.filter((o)=>o.status !== "مرتجع" && o.status !== "ملغي");
+    const returnedOrders = orders.filter((o)=>o.status === "مرتجع");
+    const replacedOrders = orders.filter((o)=>o.status === "مستبدل");
+    // حساب الإحصائيات - فقط الطلبات النشطة (غير المرتجعة وغير الملغية)
+    const totalSales = activeOrders.reduce((sum, o)=>sum + Number(o.total_amount || 0), 0);
+    const totalProfit = activeOrders.reduce((sum, o)=>sum + Number(o.total_profit || 0), 0);
+    // حساب خسائر المرتجعات (الأرباح المفقودة + المبالغ المستردة)
+    const returnedRefunds = returnedOrders.reduce((sum, o)=>sum + Number(o.refund_amount || 0), 0);
+    const returnedProfitLoss = returnedOrders.reduce((sum, o)=>sum + Number(o.total_profit || 0), 0);
+    // صافي الربح = الربح الإجمالي - خسائر المرتجعات
+    const netProfit = totalProfit - returnedProfitLoss;
     const totalOrders = orders.length;
     const completedOrders = orders.filter((o)=>o.status === "مكتمل").length;
     const totalProducts = products.length;
     const lowStockProducts = products.filter((p)=>p.quantity <= p.low_stock_threshold).length;
-    // حساب الديون
-    const totalDebt = orders.filter((o)=>o.payment_status === "دين" || o.payment_status === "دفع جزئي").reduce((sum, o)=>sum + Number(o.remaining_amount || 0), 0);
-    const debtOrders = orders.filter((o)=>o.payment_status === "دين" || o.payment_status === "دفع جزئي").length;
+    // حساب الديون - استثناء الطلبات المرتجعة
+    const totalDebt = orders.filter((o)=>(o.payment_status === "دين" || o.payment_status === "دفع جزئي") && o.status !== "مرتجع" && o.status !== "ملغي").reduce((sum, o)=>sum + Number(o.remaining_amount || 0), 0);
+    const debtOrders = orders.filter((o)=>(o.payment_status === "دين" || o.payment_status === "دفع جزئي") && o.status !== "مرتجع" && o.status !== "ملغي").length;
     // حساب قيمة المخزون الإجمالية
     const inventoryValue = products.reduce((sum, p)=>sum + p.quantity * p.selling_price, 0);
     // آخر الطلبات
@@ -577,7 +605,7 @@ function DashboardContent({ products, orders }) {
                                     children: "مرحباً، abdelrahman"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -585,18 +613,18 @@ function DashboardContent({ products, orders }) {
                                     children: "نظرة عامة على متجرك"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                            lineNumber: 61,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 60,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -607,7 +635,7 @@ function DashboardContent({ products, orders }) {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 68,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -618,7 +646,7 @@ function DashboardContent({ products, orders }) {
                                 className: "pr-12 pl-12 py-6 text-lg rounded-xl border-2 border-border focus:border-primary bg-surface"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 69,
+                                lineNumber: 82,
                                 columnNumber: 11
                             }, this),
                             searchQuery && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -630,24 +658,24 @@ function DashboardContent({ products, orders }) {
                                     size: 20
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 96,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 77,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 67,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                lineNumber: 59,
+                lineNumber: 72,
                 columnNumber: 7
             }, this),
             searchResults !== null && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -664,7 +692,7 @@ function DashboardContent({ products, orders }) {
                                         size: 24
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 107,
                                         columnNumber: 15
                                     }, this),
                                     "نتائج البحث",
@@ -677,13 +705,13 @@ function DashboardContent({ products, orders }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 96,
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 93,
+                                lineNumber: 106,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -693,13 +721,13 @@ function DashboardContent({ products, orders }) {
                                 children: "إغلاق"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 98,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 92,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this),
                     searchResults.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -711,7 +739,7 @@ function DashboardContent({ products, orders }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 104,
+                        lineNumber: 117,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-3 max-h-96 overflow-y-auto",
@@ -730,7 +758,7 @@ function DashboardContent({ products, orders }) {
                                                 className: "w-14 h-14 rounded-lg object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 117,
+                                                lineNumber: 130,
                                                 columnNumber: 25
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "w-14 h-14 rounded-lg bg-border flex items-center justify-center",
@@ -739,12 +767,12 @@ function DashboardContent({ products, orders }) {
                                                     className: "text-text-muted"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                    lineNumber: 124,
+                                                    lineNumber: 137,
                                                     columnNumber: 27
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 123,
+                                                lineNumber: 136,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -754,7 +782,7 @@ function DashboardContent({ products, orders }) {
                                                         children: product.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 128,
+                                                        lineNumber: 141,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -765,7 +793,7 @@ function DashboardContent({ products, orders }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 129,
+                                                        lineNumber: 142,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -777,19 +805,19 @@ function DashboardContent({ products, orders }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 130,
+                                                        lineNumber: 143,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 127,
+                                                lineNumber: 140,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 128,
                                         columnNumber: 21
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -800,7 +828,7 @@ function DashboardContent({ products, orders }) {
                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(product.selling_price)
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 147,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -811,7 +839,7 @@ function DashboardContent({ products, orders }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 148,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -819,31 +847,31 @@ function DashboardContent({ products, orders }) {
                                                 children: status
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 149,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 146,
                                         columnNumber: 21
                                     }, this)
                                 ]
                             }, product.id, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 110,
+                                lineNumber: 123,
                                 columnNumber: 19
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 106,
+                        lineNumber: 119,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                lineNumber: 91,
+                lineNumber: 104,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -857,18 +885,18 @@ function DashboardContent({ products, orders }) {
                         color: "primary"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 148,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$stat$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StatCard"], {
-                        title: "إجمالي الأرباح",
-                        value: totalProfit,
+                        title: "صافي الأرباح",
+                        value: netProfit,
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"],
                         isCurrency: true,
                         color: "success"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 149,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$stat$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StatCard"], {
@@ -879,7 +907,7 @@ function DashboardContent({ products, orders }) {
                         color: "primary"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 150,
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$stat$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StatCard"], {
@@ -890,14 +918,98 @@ function DashboardContent({ products, orders }) {
                         color: totalDebt > 0 ? "danger" : "success"
                     }, void 0, false, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 151,
+                        lineNumber: 164,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                lineNumber: 147,
+                lineNumber: 160,
                 columnNumber: 7
+            }, this),
+            returnedOrders.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                href: "/returns",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "bg-gradient-to-r from-orange-500/10 to-orange-300/10 border border-orange-300/30 rounded-2xl p-4 mb-4 hover:shadow-md transition-shadow cursor-pointer",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "p-3 bg-orange-500/10 rounded-xl",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"], {
+                                            className: "text-orange-500",
+                                            size: 24
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                            lineNumber: 180,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                        lineNumber: 179,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "font-bold text-text",
+                                                children: "المرتجعات"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                                lineNumber: 183,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm text-text-muted",
+                                                children: [
+                                                    returnedOrders.length,
+                                                    " طلب مرتجع | خسارة أرباح: ",
+                                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(returnedProfitLoss)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                                lineNumber: 184,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                        lineNumber: 182,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                lineNumber: 178,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                variant: "outline",
+                                className: "border-orange-400 text-orange-600 hover:bg-orange-50",
+                                children: "عرض المرتجعات"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                                lineNumber: 189,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                        lineNumber: 177,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                    lineNumber: 176,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
+                lineNumber: 175,
+                columnNumber: 9
             }, this),
             debtOrders > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: "/debts",
@@ -916,12 +1028,12 @@ function DashboardContent({ products, orders }) {
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 204,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 203,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -931,7 +1043,7 @@ function DashboardContent({ products, orders }) {
                                                 children: "لديك ديون معلقة"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 170,
+                                                lineNumber: 207,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -943,19 +1055,19 @@ function DashboardContent({ products, orders }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 171,
+                                                lineNumber: 208,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 206,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 165,
+                                lineNumber: 202,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -964,23 +1076,23 @@ function DashboardContent({ products, orders }) {
                                 children: "عرض الديون"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 176,
+                                lineNumber: 213,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 164,
+                        lineNumber: 201,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                    lineNumber: 163,
+                    lineNumber: 200,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                lineNumber: 162,
+                lineNumber: 199,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1000,14 +1112,14 @@ function DashboardContent({ products, orders }) {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 190,
+                                                lineNumber: 227,
                                                 columnNumber: 15
                                             }, this),
                                             "آخر الطلبات"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 189,
+                                        lineNumber: 226,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1016,13 +1128,13 @@ function DashboardContent({ products, orders }) {
                                         children: "عرض الكل"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 230,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 188,
+                                lineNumber: 225,
                                 columnNumber: 11
                             }, this),
                             recentOrders.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1030,7 +1142,7 @@ function DashboardContent({ products, orders }) {
                                 children: "لا توجد طلبات بعد"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 199,
+                                lineNumber: 236,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "space-y-3",
@@ -1047,7 +1159,7 @@ function DashboardContent({ products, orders }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 242,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1057,20 +1169,20 @@ function DashboardContent({ products, orders }) {
                                                                 size: 14
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                                lineNumber: 207,
+                                                                lineNumber: 244,
                                                                 columnNumber: 23
                                                             }, this),
                                                             (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatDate"])(order.created_at)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 206,
+                                                        lineNumber: 243,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 241,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1081,7 +1193,7 @@ function DashboardContent({ products, orders }) {
                                                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(order.total_amount)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 212,
+                                                        lineNumber: 249,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1089,30 +1201,30 @@ function DashboardContent({ products, orders }) {
                                                         children: order.status
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 213,
+                                                        lineNumber: 250,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 211,
+                                                lineNumber: 248,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, order.id, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 240,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 201,
+                                lineNumber: 238,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 187,
+                        lineNumber: 224,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1129,14 +1241,14 @@ function DashboardContent({ products, orders }) {
                                                 size: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 264,
                                                 columnNumber: 15
                                             }, this),
                                             "تنبيه المخزون"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 263,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1145,13 +1257,13 @@ function DashboardContent({ products, orders }) {
                                         children: "عرض الكل"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 267,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 225,
+                                lineNumber: 262,
                                 columnNumber: 11
                             }, this),
                             lowStockList.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1159,7 +1271,7 @@ function DashboardContent({ products, orders }) {
                                 children: "جميع المنتجات متوفرة"
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 236,
+                                lineNumber: 273,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "space-y-3",
@@ -1177,7 +1289,7 @@ function DashboardContent({ products, orders }) {
                                                         className: "w-12 h-12 rounded-lg object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 245,
+                                                        lineNumber: 282,
                                                         columnNumber: 25
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-12 h-12 rounded-lg bg-border flex items-center justify-center",
@@ -1186,12 +1298,12 @@ function DashboardContent({ products, orders }) {
                                                             className: "text-text-muted"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                            lineNumber: 252,
+                                                            lineNumber: 289,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 251,
+                                                        lineNumber: 288,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1201,7 +1313,7 @@ function DashboardContent({ products, orders }) {
                                                                 children: product.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                                lineNumber: 256,
+                                                                lineNumber: 293,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1212,19 +1324,19 @@ function DashboardContent({ products, orders }) {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                                lineNumber: 257,
+                                                                lineNumber: 294,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 255,
+                                                        lineNumber: 292,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 243,
+                                                lineNumber: 280,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1235,7 +1347,7 @@ function DashboardContent({ products, orders }) {
                                                         children: product.quantity
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 261,
+                                                        lineNumber: 298,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$arabic$2d$store$2d$management__$28$1$292f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1243,37 +1355,37 @@ function DashboardContent({ products, orders }) {
                                                         children: status
                                                     }, void 0, false, {
                                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                        lineNumber: 262,
+                                                        lineNumber: 299,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 297,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, product.id, true, {
                                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                        lineNumber: 242,
+                                        lineNumber: 279,
                                         columnNumber: 19
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                                lineNumber: 238,
+                                lineNumber: 275,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                        lineNumber: 224,
+                        lineNumber: 261,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Downloads/arabic-store-management (1)/components/dashboard/dashboard-content.tsx",
-                lineNumber: 185,
+                lineNumber: 222,
                 columnNumber: 7
             }, this)
         ]

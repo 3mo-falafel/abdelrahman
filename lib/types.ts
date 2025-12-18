@@ -17,11 +17,17 @@ export interface Order {
   total_amount: number
   total_cost: number
   total_profit: number
-  status: "جديد" | "مكتمل" | "ملغي"
+  status: "جديد" | "مكتمل" | "ملغي" | "مرتجع" | "مستبدل"
   customer_name?: string | null
   payment_status: "مدفوع" | "دين" | "دفع جزئي"
   paid_amount: number
   remaining_amount: number
+  return_reason?: string | null
+  returned_at?: string | null
+  refund_amount?: number
+  return_handled?: boolean
+  return_handled_type?: "returned_to_supplier" | "kept_in_warehouse" | "replaced_from_supplier" | null
+  return_handled_at?: string | null
   created_at: string
   updated_at: string
   items?: OrderItem[]
@@ -87,6 +93,12 @@ export function getOrderStatusColor(status: Order["status"]): string {
       return "bg-green-100 text-green-800"
     case "ملغي":
       return "bg-red-100 text-red-800"
+    case "مرتجع":
+      return "bg-orange-100 text-orange-800"
+    case "مستبدل":
+      return "bg-purple-100 text-purple-800"
+    default:
+      return "bg-gray-100 text-gray-800"
   }
 }
 

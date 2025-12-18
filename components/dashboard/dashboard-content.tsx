@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { StatCard } from "@/components/stat-card"
-import { DollarSign, TrendingUp, Package, AlertTriangle, ShoppingCart, Clock, Search, X, Wallet } from "lucide-react"
+import { DollarSign, TrendingUp, Package, AlertTriangle, ShoppingCart, Clock, Search, X, Wallet, RotateCcw } from "lucide-react"
 import { formatCurrency, formatDate, getOrderStatusColor, getStockStatus, getStockStatusColor } from "@/lib/types"
 import type { Product, Order } from "@/lib/types"
 import Link from "next/link"
@@ -17,19 +17,32 @@ interface DashboardContentProps {
 export function DashboardContent({ products, orders }: DashboardContentProps) {
   const [searchQuery, setSearchQuery] = useState("")
 
-  // حساب الإحصائيات - حساب جميع الطلبات للمبيعات الإجمالية
-  const totalSales = orders.reduce((sum, o) => sum + Number(o.total_amount || 0), 0)
-  const totalProfit = orders.reduce((sum, o) => sum + Number(o.total_profit || 0), 0)
+  // تصفية الطلبات - استثناء المرتجعات والملغية من حسابات الأرباح
+  const activeOrders = orders.filter((o) => o.status !== "مرتجع" && o.status !== "ملغي")
+  const returnedOrders = orders.filter((o) => o.status === "مرتجع")
+  const replacedOrders = orders.filter((o) => o.status === "مستبدل")
+
+  // حساب الإحصائيات - فقط الطلبات النشطة (غير المرتجعة وغير الملغية)
+  const totalSales = activeOrders.reduce((sum, o) => sum + Number(o.total_amount || 0), 0)
+  const totalProfit = activeOrders.reduce((sum, o) => sum + Number(o.total_profit || 0), 0)
+  
+  // حساب خسائر المرتجعات (الأرباح المفقودة + المبالغ المستردة)
+  const returnedRefunds = returnedOrders.reduce((sum, o) => sum + Number(o.refund_amount || 0), 0)
+  const returnedProfitLoss = returnedOrders.reduce((sum, o) => sum + Number(o.total_profit || 0), 0)
+  
+  // صافي الربح = الربح الإجمالي - خسائر المرتجعات
+  const netProfit = totalProfit - returnedProfitLoss
+
   const totalOrders = orders.length
   const completedOrders = orders.filter((o) => o.status === "مكتمل").length
   const totalProducts = products.length
   const lowStockProducts = products.filter((p) => p.quantity <= p.low_stock_threshold).length
 
-  // حساب الديون
+  // حساب الديون - استثناء الطلبات المرتجعة
   const totalDebt = orders
-    .filter((o) => o.payment_status === "دين" || o.payment_status === "دفع جزئي")
+    .filter((o) => (o.payment_status === "دين" || o.payment_status === "دفع جزئي") && o.status !== "مرتجع" && o.status !== "ملغي")
     .reduce((sum, o) => sum + Number(o.remaining_amount || 0), 0)
-  const debtOrders = orders.filter((o) => o.payment_status === "دين" || o.payment_status === "دفع جزئي").length
+  const debtOrders = orders.filter((o) => (o.payment_status === "دين" || o.payment_status === "دفع جزئي") && o.status !== "مرتجع" && o.status !== "ملغي").length
 
   // حساب قيمة المخزون الإجمالية
   const inventoryValue = products.reduce((sum, p) => sum + (p.quantity * p.selling_price), 0)
@@ -146,7 +159,7 @@ export function DashboardContent({ products, orders }: DashboardContentProps) {
       {/* البطاقات الإحصائية */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard title="إجمالي المبيعات" value={totalSales} icon={DollarSign} isCurrency color="primary" />
-        <StatCard title="إجمالي الأرباح" value={totalProfit} icon={TrendingUp} isCurrency color="success" />
+        <StatCard title="صافي الأرباح" value={netProfit} icon={TrendingUp} isCurrency color="success" />
         <StatCard title="قيمة المخزون" value={inventoryValue} icon={Package} isCurrency color="primary" />
         <StatCard
           title="إجمالي الديون"
@@ -156,6 +169,30 @@ export function DashboardContent({ products, orders }: DashboardContentProps) {
           color={totalDebt > 0 ? "danger" : "success"}
         />
       </div>
+
+      {/* إشعار المرتجعات */}
+      {returnedOrders.length > 0 && (
+        <Link href="/returns">
+          <div className="bg-gradient-to-r from-orange-500/10 to-orange-300/10 border border-orange-300/30 rounded-2xl p-4 mb-4 hover:shadow-md transition-shadow cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-orange-500/10 rounded-xl">
+                  <RotateCcw className="text-orange-500" size={24} />
+                </div>
+                <div>
+                  <p className="font-bold text-text">المرتجعات</p>
+                  <p className="text-sm text-text-muted">
+                    {returnedOrders.length} طلب مرتجع | خسارة أرباح: {formatCurrency(returnedProfitLoss)}
+                  </p>
+                </div>
+              </div>
+              <Button variant="outline" className="border-orange-400 text-orange-600 hover:bg-orange-50">
+                عرض المرتجعات
+              </Button>
+            </div>
+          </div>
+        </Link>
+      )}
 
       {/* إشعار الديون */}
       {debtOrders > 0 && (
